@@ -47,5 +47,13 @@ export default new Vuex.Store({
           'お会計10%キャンペーン実施中です。\nこの機会に是非ご賞味ください。',
       },
     ],
+    Home: 'ホーム',
+    Cart: '買い物かご',
+    News: 'news',
+    Products: '商品一覧',
+    About: '店舗のご案内',
+    Tips: '梅の豆知識',
+    Guide: 'ご注文ガイド',
+    Contact: 'お問い合わせ',
   },
 });

@@ -2,13 +2,13 @@
   <div class="main">
     <div class="parent">
       <div class="contents-box">
-        <a href="https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%A7%85">
+        <div>
           <img
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
           />
-        </a>
+        </div>
         <h2 class="subtitle">梅干1</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
@@ -17,13 +17,13 @@
         </div>
       </div>
       <div class="contents-box">
-        <a href="https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%A7%85">
+        <div>
           <img
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
           />
-        </a>
+        </div>
         <h2 class="subtitle">梅干2</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
@@ -32,13 +32,13 @@
         </div>
       </div>
       <div class="contents-box">
-        <a href="https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%A7%85">
+        <div>
           <img
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
           />
-        </a>
+        </div>
         <h2 class="subtitle">梅干3</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
@@ -47,13 +47,13 @@
         </div>
       </div>
       <div class="contents-box">
-        <a href="https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%A7%85">
+        <div>
           <img
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
           />
-        </a>
+        </div>
         <h2 class="subtitle">梅干4</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
@@ -62,13 +62,13 @@
         </div>
       </div>
       <div class="contents-box">
-        <a href="https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%A7%85">
+        <div>
           <img
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
           />
-        </a>
+        </div>
         <h2 class="subtitle">梅干5</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
@@ -77,13 +77,13 @@
         </div>
       </div>
       <div class="contents-box">
-        <a href="https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%A7%85">
+        <div>
           <img
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
           />
-        </a>
+        </div>
         <h2 class="subtitle">梅干6</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
@@ -92,13 +92,13 @@
         </div>
       </div>
       <div class="contents-box">
-        <a href="https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%A7%85">
+        <div>
           <img
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
           />
-        </a>
+        </div>
         <h2 class="subtitle">梅干7</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
@@ -107,13 +107,13 @@
         </div>
       </div>
       <div class="contents-box">
-        <a href="https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%A7%85">
+        <div>
           <img
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
           />
-        </a>
+        </div>
         <h2 class="subtitle">梅干8</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
@@ -137,7 +137,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h2 {
   color: #555d6b;
@@ -146,35 +145,35 @@ h2 {
 .parent {
   margin-top: 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
 }
 .contents-box {
-  /* background-color: lightgray; */
+  background: url(../assets/footer/footer.jpeg) center center;
+  background-size: cover;
   padding: 10px;
   margin: 10px;
   width: 40%;
   text-align: center;
 }
 .contents-img {
-  width: 80%;
-  height: 200px;
-  object-fit: contain;
+  max-width: 100%;
+  height: auto;
 }
 
 @media (min-width: 960px) {
   .contents-box {
-    width: 25%;
+    width: 26%;
   }
 }
 
-@media (min-width: 1250px) {
+/* @media (min-width: 1250px) {
   .contents-box {
-    width: 20%;
+    width: 26%;
   }
-}
+} */
 
 .empty_item {
   width: 40%;
@@ -184,17 +183,18 @@ h2 {
 
 @media (min-width: 960px) {
   .empty_item {
-    width: 25%;
+    width: 26%;
   }
 }
 
-@media (min-width: 1250px) {
+/* @media (min-width: 1250px) {
   .empty_item {
     width: 20%;
   }
-}
+} */
 
 .products-button {
+  margin-bottom: 10px;
   cursor: pointer;
   color: #fff;
   background-color: rgba(223, 084, 107, 0.7);

@@ -2,20 +2,24 @@
   <div>
     <Header></Header>
     <router-view></router-view>
+    <Footer></Footer>
   </div>
 </template>
 <script>
 import 'normalize.css';
 import Header from './component/Header.vue';
+import Footer from './component/Footer.vue';
 
 export default {
   components: {
     Header,
+    Footer,
   },
 };
 </script>
 <style>
 .container {
+  position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;

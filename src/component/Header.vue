@@ -79,16 +79,34 @@
 export default {
   data: function() {
     return {
-      Home: 'ホーム',
-      Cart: '買い物かご',
-      News: 'news',
-      Products: '商品一覧',
-      About: '店舗のご案内',
-      Tips: '梅の豆知識',
-      Guide: 'ご注文ガイド',
-      Contact: 'お問い合わせ',
       ActiveBtn: false,
     };
+  },
+  computed: {
+    Home() {
+      return this.$store.state.Home;
+    },
+    Cart() {
+      return this.$store.state.Cart;
+    },
+    News() {
+      return this.$store.state.News;
+    },
+    Products() {
+      return this.$store.state.Products;
+    },
+    About() {
+      return this.$store.state.About;
+    },
+    Tips() {
+      return this.$store.state.Tips;
+    },
+    Guide() {
+      return this.$store.state.Guide;
+    },
+    Contact() {
+      return this.$store.state.Contact;
+    },
   },
 };
 </script>

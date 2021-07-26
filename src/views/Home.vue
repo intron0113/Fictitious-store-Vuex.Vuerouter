@@ -45,14 +45,13 @@
         </div>
       </div>
     </section>
-    <section class="kodawari">
-      <div class="container"></div>
-    </section>
+    <Kodawari></Kodawari>
   </div>
 </template>
 <script>
 import HeroSlider from '../component/HeroSlider.vue';
 import Productlist from '../component/Productlist.vue';
+import Kodawari from '../component/Kodawari.vue';
 
 export default {
   data: function() {
@@ -68,6 +67,7 @@ export default {
   components: {
     HeroSlider,
     Productlist,
+    Kodawari,
   },
   methods: {
     toNews() {
@@ -125,6 +125,7 @@ table {
   text-align: left;
 }
 
+/* ボタン */
 .news-button {
   cursor: pointer;
   color: #fff;
@@ -144,14 +145,5 @@ table {
 /* 商品一覧 */
 .products-container {
   margin-top: 50px;
-}
-
-.kodawari {
-  background: url(..//assets/home/home-guide1.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 15rem 5rem;
-  color: #fff;
 }
 </style>
