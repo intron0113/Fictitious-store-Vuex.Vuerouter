@@ -1,28 +1,61 @@
 <template>
   <div>
-    <header>
-      <div class="header-logo">
-        <img src="./assets/header/header-logo.jpg" alt="味覚庵" />
-      </div>
-      <div class="header-text">
-        <p>「紀州・南高梅」の新宿直売店</p>
-        <!-- <p>-創業昭和32年-</p>
-        <p>業界でも評判の品質と味わい!</p>
-        <p>由緒あるホテルや高級料亭でしか</p>
-        <p>味わえなかった幻の逸品「紀州・南高梅」が、</p>
-        <p>ようやくご家庭で召し上がれるようになりました！</p> -->
-      </div>
-    </header>
+    <Header></Header>
     <router-view></router-view>
   </div>
 </template>
+<script>
+import 'normalize.css';
+import Header from './component/Header.vue';
+
+export default {
+  components: {
+    Header,
+  },
+};
+</script>
 <style>
-.header-logo img {
-  float: left;
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.header-text {
-  float: left;
-  font-size: 0.9rem;
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
 }
 </style>
