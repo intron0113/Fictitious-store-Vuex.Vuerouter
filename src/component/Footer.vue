@@ -52,7 +52,7 @@
       </div>
     </div>
     <div class="copy">
-      © 2021 和歌山の紀州南高梅干しの通販 熊平の梅. All Rights Reserved.
+      © 2021 梅干庵. All Rights Reserved.
     </div>
   </footer>
 </template>
@@ -116,6 +116,14 @@ footer {
 .footer-gide {
   display: flex;
   justify-content: space-between;
+}
+
+.adress {
+  width: 45%;
+}
+
+.map {
+  width: 45%;
 }
 
 .footer-botton {
