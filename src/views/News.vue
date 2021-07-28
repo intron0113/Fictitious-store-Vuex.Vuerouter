@@ -16,7 +16,7 @@
               <tbody v-for="info in infos" :key="info.id">
                 <tr v-on:click="info.id = !info.id">
                   <td class="day">{{ info.day }}</td>
-                  <td class="type-td">
+                  <td class="type-td" v-if="$mq === 'pc'">
                     <div class="type">{{ info.type }}</div>
                   </td>
                   <td class="title">{{ info.title }}</td>
@@ -86,5 +86,9 @@ export default {
   text-align: center;
   color: #fff;
   letter-spacing: 1px;
+}
+
+.container {
+  margin-bottom: 100px;
 }
 </style>

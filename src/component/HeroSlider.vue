@@ -178,6 +178,7 @@ export default {
 .swiper-slide {
   height: 300px;
   margin-top: 33px;
+  width: 100%;
 }
 @media screen and (min-width: 481px) {
   /* 481px以上に適用されるCSS（タブレット用） */

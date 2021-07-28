@@ -22,7 +22,7 @@
             <p>
               和歌山県○○郡○○町0000-0
               <br />
-              TEL.0739-72-2730 FAX.0739-72-2412
+              TEL.1234-56-7890 FAX.1234-56-7890
             </p>
             <div href="#" class="btn footer-botton">
               <i class="far fa-envelope" aria-hidden="true"></i>
@@ -115,15 +115,35 @@ footer {
 
 .footer-gide {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 481px) {
+  .footer-gide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .adress {
-  width: 45%;
+  width: 100%;
 }
 
 .map {
-  width: 45%;
+  width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+  .adress {
+    width: 45%;
+  }
+  .map {
+    width: 45%;
+  }
 }
 
 .footer-botton {

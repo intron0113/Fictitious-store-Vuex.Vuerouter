@@ -1,5 +1,5 @@
 <template>
-  <section class="kodawari">
+  <section class="kodawari" v-if="$mq === 'pc'">
     <div class="kodawari-back"></div>
     <div class="container">
       <div class="kosawari-text">
@@ -19,7 +19,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 10rem 5rem 20rem 5rem;
+  padding: 10rem 0rem 20rem 0rem;
   color: #fff;
   position: relative;
   margin-top: 50px;

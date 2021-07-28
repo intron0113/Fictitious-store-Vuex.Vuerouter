@@ -2,7 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import News from './views/News.vue';
-// import Product from './views/Productlist.vue';
+import Products1 from './views/products/ProductPage1.vue';
+import ShoppingCart from './views/ShoppingCart.vue';
 
 Vue.use(Router);
 
@@ -11,7 +12,8 @@ export default new Router({
   //component URLを紐付けする//
   routes: [
     { path: '/', component: Home },
-    // { path: '/product', component: Product },
+    { path: '/products1', component: Products1 },
+    { path: '/shopping-cart', component: ShoppingCart },
     { path: '/news', component: News },
   ],
 });

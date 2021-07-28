@@ -2,10 +2,8 @@
   <div>
     <header class="header">
       <div class="header__inner appear up">
-        <div class="logo item">
+        <div class="logo item" @click="toHome">
           <img src="../assets/header/umean.png" alt="梅屋庵" />
-          <!-- <span class="logo__shota">味覚庵</span>
-          <p>「紀州・南高梅」の新宿直売店</p> -->
         </div>
         <!-- PC表示 -->
         <div v-if="$mq === 'pc'">
@@ -29,7 +27,9 @@
         <!-- モバイル表示 -->
         <div v-if="$mq === 'sp'">
           <!-- 買い物かご -->
-          <div class="mb-cart-icon"><i class="fas fa-shopping-cart"></i></div>
+          <div class="mb-cart-icon" @click="toShopping">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
           <!--ハンバーガーメニューのボタン-->
           <div class="hamburger_btn" v-on:click="ActiveBtn = !ActiveBtn">
             <span
@@ -108,6 +108,14 @@ export default {
       return this.$store.state.Contact;
     },
   },
+  methods: {
+    toShopping() {
+      this.$router.push('shopping-cart');
+    },
+    toHome() {
+      this.$router.push('/');
+    },
+  },
 };
 </script>
 <style>
@@ -132,8 +140,15 @@ export default {
 
 .logo img {
   height: 90px;
-  width: 200px;
+  width: 100px;
   object-fit: cover;
+}
+
+@media screen and (min-width: 481px) {
+  .logo img {
+    height: 90px;
+    width: 200px;
+  }
 }
 
 /* PCメニューバー */
@@ -158,21 +173,32 @@ li {
 /* 買い物カート */
 .mb-cart-icon {
   position: fixed;
-  top: 20px;
-  right: 90px;
-  width: 50px;
-  height: 50px;
+  top: 30px;
+  right: 80px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   z-index: 10;
   background-color: rgba(223, 084, 107, 0.9);
   border-radius: 5px;
   border: 1px solid transparent;
   color: #fff;
-  font-size: 34px;
+  font-size: 30px;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (min-width: 481px) {
+  /* 481px以上に適用されるCSS（タブレット用） */
+  .mb-cart-icon {
+    top: 20px;
+    right: 90px;
+    width: 50px;
+    height: 50px;
+    font-size: 34px;
+  }
 }
 /* 買い物カートPC */
 .cart-icon {
@@ -202,20 +228,39 @@ li {
   position: fixed; /*常に最上部に表示したいので固定top: 20px;*/
   top: 20px;
   right: 20px;
-  width: 70px;
-  height: 72px;
+  width: 50px;
+  height: 52px;
   cursor: pointer;
   z-index: 50;
+}
+
+@media screen and (min-width: 481px) {
+  /* 481px以上に適用されるCSS（タブレット用） */
+  .hamburger_btn {
+    width: 70px;
+    height: 72px;
+  }
 }
 
 .hamburger_btn .line {
   position: absolute;
   top: 0;
-  left: 20px;
-  width: 32px;
+  left: 15px;
+  width: 25px;
   height: 2px;
   background: #333333;
   text-align: center;
+}
+
+@media screen and (min-width: 481px) {
+  /* 481px以上に適用されるCSS（タブレット用） */
+  .hamburger_btn .line {
+    left: 20px;
+    width: 32px;
+    height: 2px;
+    background: #333333;
+    text-align: center;
+  }
 }
 
 .hamburger_btn .line_01 {

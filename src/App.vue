@@ -20,7 +20,7 @@ export default {
 <style>
 .container {
   position: relative;
-  width: 100%;
+  width: 90%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -61,5 +61,13 @@ export default {
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: all 0.3s ease;
+}
+
+header {
+  width: 100%;
+}
+
+section {
+  width: 100%;
 }
 </style>

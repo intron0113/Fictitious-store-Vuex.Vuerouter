@@ -11,8 +11,8 @@
         </div>
         <h2 class="subtitle">梅干1</h2>
         <div>
-          <button class="products-button  btn" @click="toNews">
-            くわしく見る
+          <button class="products-button  btn" @click="toProduct1">
+            くわしく
           </button>
         </div>
       </div>
@@ -27,7 +27,7 @@
         <h2 class="subtitle">梅干2</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
-            くわしく見る
+            くわしく
           </button>
         </div>
       </div>
@@ -42,7 +42,7 @@
         <h2 class="subtitle">梅干3</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
-            くわしく見る
+            くわしく
           </button>
         </div>
       </div>
@@ -57,7 +57,7 @@
         <h2 class="subtitle">梅干4</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
-            くわしく見る
+            くわしく
           </button>
         </div>
       </div>
@@ -72,7 +72,7 @@
         <h2 class="subtitle">梅干5</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
-            くわしく見る
+            くわしく
           </button>
         </div>
       </div>
@@ -87,7 +87,7 @@
         <h2 class="subtitle">梅干6</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
-            くわしく見る
+            くわしく
           </button>
         </div>
       </div>
@@ -102,7 +102,7 @@
         <h2 class="subtitle">梅干7</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
-            くわしく見る
+            くわしく
           </button>
         </div>
       </div>
@@ -117,7 +117,7 @@
         <h2 class="subtitle">梅干8</h2>
         <div>
           <button class="products-button  btn" @click="toNews">
-            くわしく見る
+            くわしく
           </button>
         </div>
       </div>
@@ -134,6 +134,11 @@ export default {
       msg: 'ここはメイン１です',
     };
   },
+  methods: {
+    toProduct1() {
+      this.$router.push('products1');
+    },
+  },
 };
 </script>
 
@@ -145,11 +150,24 @@ h2 {
 .parent {
   margin-top: 10px;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-content: flex-start;
+  align-items: center;
+  /* align-content: flex-start; */
 }
+
+@media screen and (min-width: 481px) {
+  .parent {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+}
+
 .contents-box {
   background: url(../assets/footer/footer.jpeg) center center;
   background-size: cover;
