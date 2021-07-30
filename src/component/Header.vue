@@ -19,7 +19,7 @@
               <li class="header__li item">{{ Products }}</li>
               <li class="header__li item">{{ About }}</li>
               <li class="header__li item">{{ Tips }}</li>
-              <li class="header__li item">{{ Guide }}</li>
+              <!-- <li class="header__li item">{{ Guide }}</li> -->
               <li class="header__li item">{{ Contact }}</li>
             </ul>
           </nav>
@@ -63,10 +63,10 @@
                 <!-- <li class="mb-h-li item">ホームメニュー</li> -->
                 <li class="mb-h-li item">{{ News }}</li>
                 <li class="mb-h-li item">{{ Products }}</li>
-                <li class="mb-h-li item">{{ About }}</li>
-                <li class="mb-h-li item">{{ Tips }}</li>
-                <li class="mb-h-li item">{{ Guide }}</li>
-                <li class="mb-h-li item">{{ Contact }}</li>
+                <li class="mb-h-li item" @click="StoreMaps">{{ About }}</li>
+                <li class="mb-h-li item" @click="Commit">{{ Tips }}</li>
+                <!-- <li class="mb-h-li item">{{ Guide }}</li> -->
+                <li class="mb-h-li item" @click="Contact1">{{ Contact }}</li>
               </ul>
             </div>
           </transition>
@@ -101,9 +101,9 @@ export default {
     Tips() {
       return this.$store.state.Tips;
     },
-    Guide() {
-      return this.$store.state.Guide;
-    },
+    // Guide() {
+    //   return this.$store.state.Guide;
+    // },
     Contact() {
       return this.$store.state.Contact;
     },
@@ -114,6 +114,15 @@ export default {
     },
     toHome() {
       this.$router.push('/');
+    },
+    StoreMaps() {
+      this.$router.push('store');
+    },
+    Commit() {
+      this.$router.push('commit');
+    },
+    Contact1() {
+      this.$router.push('contact1');
     },
   },
 };

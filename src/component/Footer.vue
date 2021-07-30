@@ -10,7 +10,7 @@
             <li class="footer__li item">{{ Products }}</li>
             <li class="footer__li item">{{ About }}</li>
             <li class="footer__li item">{{ Tips }}</li>
-            <li class="footer__li item">{{ Guide }}</li>
+            <!-- <li class="footer__li item">{{ Guide }}</li> -->
             <li class="footer__li item">{{ Contact }}</li>
           </ul>
         </nav>
@@ -82,16 +82,16 @@ export default {
     Tips() {
       return this.$store.state.Tips;
     },
-    Guide() {
-      return this.$store.state.Guide;
-    },
+    // Guide() {
+    //   return this.$store.state.Guide;
+    // },
     Contact() {
       return this.$store.state.Contact;
     },
   },
 };
 </script>
-<style>
+<style style>
 footer {
   padding: 2rem 0 0 0;
   background: url(../assets/footer/footer.jpeg) center center;

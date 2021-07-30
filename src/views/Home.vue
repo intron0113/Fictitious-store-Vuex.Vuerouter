@@ -43,6 +43,11 @@
           <h2 product-title>商品一覧</h2>
           <Productlist></Productlist>
         </div>
+        <div class="btn-style">
+          <button class="news-button  btn" @click="toProduct">
+            一覧を見る
+          </button>
+        </div>
       </div>
     </section>
     <Kodawari></Kodawari>
@@ -72,6 +77,9 @@ export default {
   methods: {
     toNews() {
       this.$router.push('news');
+    },
+    toProduct() {
+      this.$router.push('product');
     },
   },
 };

@@ -56,9 +56,45 @@ export default new Vuex.Store({
     News: 'news',
     Products: '商品一覧',
     About: '店舗のご案内',
-    Tips: '梅の豆知識',
-    Guide: 'ご注文ガイド',
+    Tips: '当店のこだわり',
+    // Guide: 'ご注文ガイド',
     Contact: 'お問い合わせ',
+
+    name: '',
+    text: '',
+    email: '',
+    phone: '',
+    day: '1',
+    insurance1: '',
+    insurance2: '',
+    insurance3: '',
+  },
+  getters: {
+    cartProducts: (state) => {
+      return state.items.map((item) => {
+        const product = state.products.find(
+          (product) => product.id === item.id
+        );
+        return {
+          title: product.title,
+          price: product.price,
+          quantity: item.quantity,
+        };
+      });
+    },
+    cartTotalPrice: (state, getters) => {
+      return getters.cartProducts.reduce((total, product) => {
+        return total + product.price * product.quantity;
+      }, 0);
+    },
+    name: (state) => state.name,
+    text: (state) => state.text,
+    email: (state) => state.email,
+    phone: (state) => state.phone,
+    day: (state) => state.day,
+    insurance1: (state) => state.insurance1,
+    insurance2: (state) => state.insurance2,
+    insurance3: (state) => state.insurance3,
   },
 
   mutations: {
@@ -74,6 +110,30 @@ export default new Vuex.Store({
     incrementItemQuantity(state, { id }) {
       const cartItem = state.items.find((item) => item.id === id);
       cartItem.quantity++;
+    },
+    setName(state, name) {
+      state.name = name;
+    },
+    setMessage(state, newMessage) {
+      state.text = newMessage;
+    },
+    setMail(state, semail) {
+      state.email = semail;
+    },
+    setPhone(state, sphone) {
+      state.phone = sphone;
+    },
+    setDay(state, sDay) {
+      state.day = sDay;
+    },
+    setInsurance1(state, qInsurance1) {
+      state.insurance1 = qInsurance1;
+    },
+    setInsurance2(state, qInsurance2) {
+      state.insurance2 = qInsurance2;
+    },
+    setInsurance3(state, qInsurance3) {
+      state.insurance3 = qInsurance3;
     },
   },
   actions: {
@@ -93,24 +153,30 @@ export default new Vuex.Store({
         commit('incrementItemQuantity', cartItem);
       }
     },
-  },
-  getters: {
-    cartProducts: (state) => {
-      return state.items.map((item) => {
-        const product = state.products.find(
-          (product) => product.id === item.id
-        );
-        return {
-          title: product.title,
-          price: product.price,
-          quantity: item.quantity,
-        };
-      });
+
+    setName({ commit }, name) {
+      commit('setName', name);
     },
-    cartTotalPrice: (state, getters) => {
-      return getters.cartProducts.reduce((total, product) => {
-        return total + product.price * product.quantity;
-      }, 0);
+    setMessage({ commit }, newMessage) {
+      commit('setMessage', newMessage);
+    },
+    setMail({ commit }, semail) {
+      commit('setMail', semail);
+    },
+    setPhone({ commit }, sphone) {
+      commit('setPhone', sphone);
+    },
+    setDay({ commit }, sDay) {
+      commit('setDay', sDay);
+    },
+    setInsurance1({ commit }, qInsurance1) {
+      commit('setInsurance1', qInsurance1);
+    },
+    setInsurance2({ commit }, qInsurance2) {
+      commit('setInsurance2', qInsurance2);
+    },
+    setInsurance3({ commit }, qInsurance3) {
+      commit('setInsurance3', qInsurance3);
     },
   },
   modules: {},

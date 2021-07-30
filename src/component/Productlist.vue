@@ -7,6 +7,7 @@
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
+            @click="toProduct1"
           />
         </div>
         <h2 class="subtitle">梅干1</h2>
@@ -22,11 +23,12 @@
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
+            @click="toProduct2"
           />
         </div>
         <h2 class="subtitle">梅干2</h2>
         <div>
-          <button class="products-button  btn" @click="toNews">
+          <button class="products-button  btn" @click="toProduct2">
             くわしく
           </button>
         </div>
@@ -37,11 +39,12 @@
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
+            @click="toProduct3"
           />
         </div>
         <h2 class="subtitle">梅干3</h2>
         <div>
-          <button class="products-button  btn" @click="toNews">
+          <button class="products-button  btn" @click="toProduct3">
             くわしく
           </button>
         </div>
@@ -52,11 +55,12 @@
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
+            @click="toProduct4"
           />
         </div>
         <h2 class="subtitle">梅干4</h2>
         <div>
-          <button class="products-button  btn" @click="toNews">
+          <button class="products-button  btn" @click="toProduct4">
             くわしく
           </button>
         </div>
@@ -67,11 +71,12 @@
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
+            @click="toProduct5"
           />
         </div>
         <h2 class="subtitle">梅干5</h2>
         <div>
-          <button class="products-button  btn" @click="toNews">
+          <button class="products-button  btn" @click="toProduct5">
             くわしく
           </button>
         </div>
@@ -82,11 +87,12 @@
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
+            @click="toProduct6"
           />
         </div>
         <h2 class="subtitle">梅干6</h2>
         <div>
-          <button class="products-button  btn" @click="toNews">
+          <button class="products-button  btn" @click="toProduct6">
             くわしく
           </button>
         </div>
@@ -97,11 +103,12 @@
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
+            @click="toProduct7"
           />
         </div>
         <h2 class="subtitle">梅干7</h2>
         <div>
-          <button class="products-button  btn" @click="toNews">
+          <button class="products-button  btn" @click="toProduct7">
             くわしく
           </button>
         </div>
@@ -112,11 +119,12 @@
             src="..//assets/products/umeproduct.jpg"
             alt="flexbox"
             class="contents-img"
+            @click="toProduct8"
           />
         </div>
         <h2 class="subtitle">梅干8</h2>
         <div>
-          <button class="products-button  btn" @click="toNews">
+          <button class="products-button  btn" @click="toProduct8">
             くわしく
           </button>
         </div>
@@ -137,6 +145,27 @@ export default {
   methods: {
     toProduct1() {
       this.$router.push('products1');
+    },
+    toProduct2() {
+      this.$router.push('products2');
+    },
+    toProduct3() {
+      this.$router.push('products3');
+    },
+    toProduct4() {
+      this.$router.push('products4');
+    },
+    toProduct5() {
+      this.$router.push('products5');
+    },
+    toProduct6() {
+      this.$router.push('products6');
+    },
+    toProduct7() {
+      this.$router.push('products7');
+    },
+    toProduct8() {
+      this.$router.push('products8');
     },
   },
 };

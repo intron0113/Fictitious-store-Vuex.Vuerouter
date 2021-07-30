@@ -14,9 +14,9 @@
       </thead>
       <tbody>
         <tr v-for="product in cartProducts" :key="product.id">
-          <td>{{ product.title }}</td>
-          <td>{{ product.price }}</td>
-          <td>{{ product.quantity }}</td>
+          <td class="td">{{ product.title }}</td>
+          <td class="td">￥{{ product.price }}</td>
+          <td class="td">{{ product.quantity }}</td>
         </tr>
       </tbody>
     </table>
@@ -49,12 +49,12 @@ export default {
   computed: mapGetters(['cartProducts', 'cartTotalPrice']),
 };
 </script>
-<style>
+<style scoped>
 /* 商品カゴ表 */
 .shop-table {
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin: 0 -1px 24px 0;
-  text-align: left;
+  text-align: center;
   width: 100%;
   border-collapse: separate;
   border-radius: 5px;
@@ -66,7 +66,8 @@ export default {
   background-color: #dddfe2;
 }
 
-.th {
+.th,
+td {
   padding: 10px;
 }
 
@@ -75,6 +76,13 @@ export default {
   width: 100%;
   float: none;
   text-align: left;
+}
+
+@media screen and (min-width: 961px) {
+  .cart_totals {
+    width: 49%;
+    float: right;
+  }
 }
 
 .cart_totals h2 {
@@ -100,6 +108,7 @@ export default {
   border-collapse: separate;
   border-radius: 5px;
 }
+
 .cart_totals tbody {
   box-sizing: border-box;
   display: table-row-group;

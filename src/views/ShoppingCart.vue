@@ -8,9 +8,6 @@
       </div>
     </section>
     <div class="container">
-      <h1>Shopping Cart Example</h1>
-      <hr />
-      <h2>Products</h2>
       <ShoppingCart />
     </div>
   </div>
@@ -49,5 +46,11 @@ export default {
 
 .container {
   margin-bottom: 100px;
+}
+
+@media screen and (min-width: 961px) {
+  .container {
+    margin-bottom: 271px;
+  }
 }
 </style>
