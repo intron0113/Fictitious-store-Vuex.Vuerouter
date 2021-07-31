@@ -212,6 +212,7 @@ export default {
   .swiper-container,
   .swiper-slide {
     height: 100vh;
+    margin-top: 80px;
   }
 }
 
