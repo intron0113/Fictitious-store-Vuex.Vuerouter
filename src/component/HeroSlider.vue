@@ -1,6 +1,6 @@
 <template>
   <div class="swiper-container">
-    <swiper-slid>
+    <div class="swiper-slide">
       <img src="..//assets/home/ume-1.jpg" alt="" />
       <div class="inner-text style-black">
         <h2>「創業昭和三三年」</h2>
@@ -8,7 +8,7 @@
         <p>味わえなかった幻の逸品「○○梅」が、</p>
         <p>ご家庭で召し上がれるようになりました。</p>
       </div>
-    </swiper-slid>
+    </div>
 
     <!-- <swiper ref="mySwiper" :options="swiperOptions">
       <swiper-slide>
@@ -194,6 +194,7 @@ export default {
   .swiper-container,
   .swiper-slide {
     height: 400px;
+    margin-top: 40px;
   }
 }
 
@@ -202,7 +203,6 @@ export default {
   .swiper-container,
   .swiper-slide {
     height: 600px;
-    margin-top: 40px;
   }
 }
 
@@ -210,7 +210,6 @@ export default {
   /* 1250px以上に適用されるCSS（PC用） */
   .swiper-container,
   .swiper-slide {
-    margin-top: 50px;
     height: 100vh;
   }
 }
