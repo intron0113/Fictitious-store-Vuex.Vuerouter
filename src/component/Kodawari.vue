@@ -6,11 +6,30 @@
         <h2>創業昭和３３年の老舗「梅干庵」</h2>
         <p>厳選された素材を最新設備の工場で製品化。</p>
         <p>美味しくて安心感のある梅干はこうして生まれました。</p>
-        <div class="btn-1" href="#"><span>こだわりを見に行く</span></div>
+        <div class="btn-1" @click="Commit"><span>こだわりを見に行く</span></div>
       </div>
     </div>
   </section>
 </template>
+<script>
+export default {
+  data: function() {
+    return {
+      ActiveBtn: false,
+    };
+  },
+  computed: {
+    Tips() {
+      return this.$store.state.Tips;
+    },
+  },
+  methods: {
+    Commit() {
+      this.$router.push('commit');
+    },
+  },
+};
+</script>
 <style>
 /* 梅やこだわり */
 

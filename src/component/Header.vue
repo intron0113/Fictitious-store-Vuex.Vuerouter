@@ -134,6 +134,9 @@ export default {
 };
 </script>
 <style>
+.logo {
+  cursor: pointer;
+}
 .header__inner {
   position: fixed;
   top: 0;
