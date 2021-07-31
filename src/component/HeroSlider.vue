@@ -1,11 +1,20 @@
 <template>
   <div class="swiper-container">
-    <swiper ref="mySwiper" :options="swiperOptions">
+    <swiper-slid>
+      <img src="..//assets/home/ume-1.jpg" alt="" />
+      <div class="inner-text style-black">
+        <h2>「創業昭和三三年」</h2>
+        <p>由緒あるホテルや高級料亭でしか</p>
+        <p>味わえなかった幻の逸品「○○梅」が、</p>
+        <p>ご家庭で召し上がれるようになりました。</p>
+      </div>
+    </swiper-slid>
+
+    <!-- <swiper ref="mySwiper" :options="swiperOptions">
       <swiper-slide>
         <img src="..//assets/home/ume-1.jpg" alt="" />
         <div class="inner-text style-black">
           <h2>「創業昭和三三年」</h2>
-          <!-- <p>業界でも評判の品質と味わい！</p> -->
           <p>由緒あるホテルや高級料亭でしか</p>
           <p>味わえなかった幻の逸品「○○梅」が、</p>
           <p>ご家庭で召し上がれるようになりました。</p>
@@ -47,7 +56,7 @@
           <p>の梅干です。</p>
         </div>
       </swiper-slide>
-    </swiper>
+    </swiper> -->
   </div>
 </template>
 
