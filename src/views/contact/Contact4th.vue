@@ -1,40 +1,52 @@
 <template>
   <div>
-    <div class="form">
-      <div class="form-header">
-        <span class="form-step">step4</span>
-        <p>以下の内容をご確認ください</p>
+    <section class="page-title-image">
+      <div class="title-overlay"></div>
+      <div class="title-box">
+        <h1>お問い合わせ</h1>
+        <p>CONTACT</p>
       </div>
-      <div class="form-main">
-        <form action="#">
-          <div>
-            <p>-お名前-</p>
-            <p>{{ name }}</p>
-            <p>-メールアドレス-</p>
-            <p>{{ email }}</p>
-            <p>-お電話番号-</p>
-            <p>{{ phone }}</p>
-
-            <p>現在生命保険に加入されていますか?</p>
-            <p>{{ insurance1 }}</p>
-            <p>
-              現在入院中ですか。または、最近3ヶ月以内に医師の診察・検査の結果、入院・手術をすすめられたことはありますか?
-            </p>
-            <p>{{ insurance2 }}</p>
-            <p>
-              過去5年以内に、病気やけがで、手術をうけたことまたは継続して7日以上の入院をした事がありますか?
-            </p>
-            <p>{{ insurance3 }}</p>
-            <p>-お問い合わせ内容-</p>
-            <p>{{ text }}</p>
+    </section>
+    <section>
+      <div class="container">
+        <div class="form">
+          <div class="form-header">
+            <p>以下の内容をご確認ください</p>
           </div>
-        </form>
+          <div class="form-main">
+            <form action="#">
+              <div>
+                <p>-お名前-</p>
+                <p>{{ name }}</p>
+                <p>-メールアドレス-</p>
+                <p>{{ email }}</p>
+                <p>-お電話番号-</p>
+                <p>{{ phone }}</p>
+
+                <p>お問い合わせ内容をお選びください。</p>
+                <p>{{ insurance1 }}</p>
+                <p>
+                  商品はどちらで購入されましたか？
+                </p>
+                <p>{{ insurance2 }}</p>
+                <p>
+                  ご返信はどのような形式がよろしいですか？
+                </p>
+                <p>{{ insurance3 }}</p>
+                <p>-お問い合わせ内容-</p>
+                <p>{{ text }}</p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="next-button">
+          <button @click="Contact3" class="btn contact-back-btn" type="reset">
+            前へ戻る
+          </button>
+          <button class="btn contact-go-btn" type="submit">送信</button>
+        </div>
       </div>
-    </div>
-    <div class="next-button">
-      <button @click="Contact3" class="btn" type="reset">前へ戻る ></button>
-      <button class="btn" type="submit">送信 ></button>
-    </div>
+    </section>
   </div>
 </template>
 <script>

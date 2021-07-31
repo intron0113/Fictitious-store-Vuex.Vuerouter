@@ -5,13 +5,13 @@
         <!-- pc用navメニュー -->
         <nav class="footer__nav">
           <ul class="footer__ul">
-            <li class="footer__li item">{{ Home }}</li>
-            <li class="footer__li item">{{ News }}</li>
-            <li class="footer__li item">{{ Products }}</li>
-            <li class="footer__li item">{{ About }}</li>
-            <li class="footer__li item">{{ Tips }}</li>
+            <li class="footer__li item" @click="toHome">{{ Home }}</li>
+            <li class="footer__li item" @click="toNews">{{ News }}</li>
+            <li class="footer__li item" @click="toProduct">{{ Products }}</li>
+            <li class="footer__li item" @click="StoreMaps">{{ About }}</li>
+            <li class="footer__li item" @click="Commit">{{ Tips }}</li>
             <!-- <li class="footer__li item">{{ Guide }}</li> -->
-            <li class="footer__li item">{{ Contact }}</li>
+            <li class="footer__li item" @click="Contact1">{{ Contact }}</li>
           </ul>
         </nav>
       </div>
@@ -24,7 +24,7 @@
               <br />
               TEL.1234-56-7890 FAX.1234-56-7890
             </p>
-            <div href="#" class="btn footer-botton">
+            <div href="#" class="btn footer-botton" @click="Contact1">
               <i class="far fa-envelope" aria-hidden="true"></i>
               お問い合わせ
             </div>
@@ -89,6 +89,29 @@ export default {
       return this.$store.state.Contact;
     },
   },
+  methods: {
+    toShopping() {
+      this.$router.push('shopping-cart');
+    },
+    toHome() {
+      this.$router.push('/');
+    },
+    toNews() {
+      this.$router.push('news');
+    },
+    toProduct() {
+      this.$router.push('product');
+    },
+    StoreMaps() {
+      this.$router.push('store');
+    },
+    Commit() {
+      this.$router.push('commit');
+    },
+    Contact1() {
+      this.$router.push('contact1');
+    },
+  },
 };
 </script>
 <style style>
@@ -119,6 +142,7 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin: 30px 0;
 }
 
 @media screen and (min-width: 481px) {
@@ -131,6 +155,7 @@ footer {
 
 .adress {
   width: 100%;
+  padding-bottom: 30px;
 }
 
 .map {

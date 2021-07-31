@@ -116,12 +116,7 @@ export default {
 }
 
 .icon-box-wrapper {
-  /* text-align: center; */
   margin: 70px 0px;
-}
-
-.why {
-  /* text-align: center; */
 }
 
 .img {

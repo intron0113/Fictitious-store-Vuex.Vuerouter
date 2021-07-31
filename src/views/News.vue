@@ -21,8 +21,6 @@
                   </td>
                   <td class="title">{{ info.title }}</td>
                 </tr>
-
-                <!-- <transition name="fade"> -->
                 <tr v-if="!info.id">
                   <td class="message" colspan="3">{{ info.message }}</td>
                 </tr>
@@ -33,7 +31,6 @@
                     </button>
                   </td>
                 </tr>
-                <!-- </transition> -->
               </tbody>
             </table>
           </div>

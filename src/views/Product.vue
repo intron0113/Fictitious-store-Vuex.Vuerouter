@@ -31,7 +31,7 @@
           </tr>
         </tbody>
       </table>
-      <div class="btn-style">
+      <div class="product-btn btn-style">
         <button class="news-button  btn" @click="toHome">HOMEに戻る</button>
       </div>
     </div>
@@ -39,8 +39,6 @@
 </template>
 
 <script>
-// import ShoppingCart from './ShoppingCart.vue';
-
 export default {
   computed: {
     products() {
@@ -50,9 +48,7 @@ export default {
   created() {
     this.$store.dispatch('getAllProducts');
   },
-  // components: {
-  //   ShoppingCart,
-  // },
+
   methods: {
     addProductToCart(product) {
       this.$store.dispatch('addProductToCart', product);
@@ -83,7 +79,6 @@ export default {
 .th,
 .td {
   padding: 20px;
-  /* font-size: 20px; */
 }
 
 .products-button {

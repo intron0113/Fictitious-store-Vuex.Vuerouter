@@ -20,7 +20,7 @@ export default {
   components: { ShoppingCart },
 };
 </script>
-<style>
+<style scoped>
 /* 新着タイトル */
 .page-title-image {
   margin-top: 100px;

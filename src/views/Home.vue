@@ -43,7 +43,7 @@
           <h2 product-title>商品一覧</h2>
           <Productlist></Productlist>
         </div>
-        <div class="btn-style">
+        <div class="product-btn btn-style">
           <button class="news-button  btn" @click="toProduct">
             一覧を見る
           </button>
@@ -150,6 +150,9 @@ table {
   text-align: center;
 }
 
+.product-btn {
+  margin: 50px;
+}
 /* 商品一覧 */
 .products-container {
   margin-top: 50px;

@@ -135,7 +135,7 @@
             loading="lazy"
           ></iframe>
         </div>
-        <div class="btn-style">
+        <div class="shop-btn btn-style">
           <button class="news-button  btn" @click="toHome">HOMEに戻る</button>
         </div>
       </div>
@@ -252,5 +252,9 @@ export default {
   padding: 10px 0;
   border-top: 1px solid #443c31;
   border-bottom: 1px solid #443c31;
+}
+
+.shop-btn {
+  margin-bottom: 50px;
 }
 </style>

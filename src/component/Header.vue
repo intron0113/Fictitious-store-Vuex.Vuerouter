@@ -8,19 +8,19 @@
         <!-- PC表示 -->
         <div v-if="$mq === 'pc'">
           <!-- 買い物かご -->
-          <div class="cart-icon">
+          <div class="cart-icon" @click="toShopping">
             <i class="fas fa-shopping-cart"></i><span>買い物カゴ</span>
           </div>
           <!-- pc用navメニュー -->
           <nav class="header__nav">
             <ul class="header__ul">
-              <li class="header__li item">{{ Home }}</li>
-              <li class="header__li item">{{ News }}</li>
-              <li class="header__li item">{{ Products }}</li>
-              <li class="header__li item">{{ About }}</li>
-              <li class="header__li item">{{ Tips }}</li>
+              <li class="header__li item" @click="toHome">{{ Home }}</li>
+              <li class="header__li item" @click="toNews">{{ News }}</li>
+              <li class="header__li item" @click="toProduct">{{ Products }}</li>
+              <li class="header__li item" @click="StoreMaps">{{ About }}</li>
+              <li class="header__li item" @click="Commit">{{ Tips }}</li>
               <!-- <li class="header__li item">{{ Guide }}</li> -->
-              <li class="header__li item">{{ Contact }}</li>
+              <li class="header__li item" @click="Contact1">{{ Contact }}</li>
             </ul>
           </nav>
         </div>
@@ -58,11 +58,11 @@
             <div class="menu" v-show="ActiveBtn">
               <ul class="mobile-menu__ul">
                 <!-- <li class="header__li item">お買い物メニュー</li> -->
-                <li class="mb-h-li item">{{ Cart }}</li>
-                <li class="mb-h-li item">{{ Home }}</li>
+                <li class="mb-h-li item" @click="toShopping">{{ Cart }}</li>
+                <li class="mb-h-li item" @click="toHome">{{ Home }}</li>
                 <!-- <li class="mb-h-li item">ホームメニュー</li> -->
-                <li class="mb-h-li item">{{ News }}</li>
-                <li class="mb-h-li item">{{ Products }}</li>
+                <li class="mb-h-li item" @click="toNews">{{ News }}</li>
+                <li class="mb-h-li item" @click="toProduct">{{ Products }}</li>
                 <li class="mb-h-li item" @click="StoreMaps">{{ About }}</li>
                 <li class="mb-h-li item" @click="Commit">{{ Tips }}</li>
                 <!-- <li class="mb-h-li item">{{ Guide }}</li> -->
@@ -114,6 +114,12 @@ export default {
     },
     toHome() {
       this.$router.push('/');
+    },
+    toNews() {
+      this.$router.push('news');
+    },
+    toProduct() {
+      this.$router.push('product');
     },
     StoreMaps() {
       this.$router.push('store');
