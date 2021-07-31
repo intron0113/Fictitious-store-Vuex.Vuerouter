@@ -203,6 +203,7 @@ export default {
   .swiper-container,
   .swiper-slide {
     height: 600px;
+    margin-top: 70px;
   }
 }
 
